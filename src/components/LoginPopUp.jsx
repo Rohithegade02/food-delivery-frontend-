@@ -46,7 +46,7 @@ const LoginPopUp = ({ setShowLogin }) => {
 		// console.log(response);
 	};
 	return (
-		<div className='absolute z-10 w-[100%] h-[100vh] bg-[#00000090] grid'>
+		<div className='absolute z-10 w-[100%] h-[100%] bg-[#00000090] grid'>
 			<form className='flex flex-col bg-white p-5  w-[60%] place-self-center rounded-lg '>
 				<div className='flex justify-between items-center'>
 					<p className='font-bold text-[16px]'>{currState}</p>

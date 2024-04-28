@@ -28,7 +28,7 @@ const Navbar = ({ setShowLogin }) => {
 							? 'pb-[5px] border-b  border-[tomato] cursor-pointer'
 							: ''
 					}>
-					Home
+					<p className='cursor-pointer'>Home</p>
 				</div>
 				<div
 					onClick={() => setMenu('Menu')}
@@ -37,7 +37,7 @@ const Navbar = ({ setShowLogin }) => {
 							? 'pb-[5px] border-b  border-[tomato] cursor-pointer'
 							: ''
 					}>
-					Menu
+					<p className='cursor-pointer'>Menu</p>
 				</div>
 				<div
 					onClick={() => setMenu('App')}
@@ -46,7 +46,7 @@ const Navbar = ({ setShowLogin }) => {
 							? 'pb-[5px] border-b  border-[tomato] cursor-pointer'
 							: ''
 					}>
-					Mobile App
+					<p className='cursor-pointer'>Mobile App</p>
 				</div>
 				<div
 					onClick={() => setMenu('Contact')}
@@ -55,16 +55,20 @@ const Navbar = ({ setShowLogin }) => {
 							? 'pb-[5px] border-b  border-[tomato] cursor-pointer'
 							: ''
 					}>
-					Contact Us
+					<p className='cursor-pointer'>Contact Us</p>
 				</div>
 			</div>
 			<div className='flex items-center gap-5'>
 				<div>
-					<img src={assets.search_icon} alt='' />
+					<img src={assets.search_icon} alt='' className='cursor-pointer' />
 				</div>
 				<div>
 					<Link to='/cart'>
-						<img src={assets.basket_icon} alt='' className='relative' />
+						<img
+							src={assets.basket_icon}
+							alt=''
+							className='relative cursor-pointer'
+						/>
 					</Link>
 				</div>
 				<div>
@@ -80,14 +84,15 @@ const Navbar = ({ setShowLogin }) => {
 								src={assets.profile_icon}
 								alt=''
 								onClick={() => setShowIcon(!showicon)}
+								className='cursor-pointer'
 							/>
 							{showicon ? (
 								<ul className='absolute bg-[white] z-10 p-5 rounded-lg '>
-									<li>
+									<li className='cursor-pointer'>
 										<img src={assets.bag_icon} alt='' />
 										<p>Orders</p>
 									</li>
-									<li>
+									<li className='cursor-pointer'>
 										<img src={assets.logout_icon} alt='' onClick={logout} />
 										<p>Logout</p>
 									</li>
