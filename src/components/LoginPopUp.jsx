@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import { assets } from '../assets/assets';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { StoreContext } from '../context/StoreContext';
 
 const LoginPopUp = ({ setShowLogin }) => {
@@ -47,7 +47,7 @@ const LoginPopUp = ({ setShowLogin }) => {
 	};
 	return (
 		<div className='absolute z-10 w-[100%] h-[100%] bg-[#00000090] grid'>
-			<form className='flex flex-col bg-white p-5  w-[60%] place-self-center rounded-lg '>
+			<form className='flex flex-col bg-white p-5  w-[40%] place-self-center rounded-lg '>
 				<div className='flex justify-between items-center'>
 					<p className='font-bold text-[16px]'>{currState}</p>
 					<img
@@ -97,9 +97,11 @@ const LoginPopUp = ({ setShowLogin }) => {
 					</button>
 				</form>
 
-				<div className='flex gap-2'>
+				<div className='flex gap-3 items-center mt-2'>
 					<input type='checkbox' required />
-					<p>By Continuing,i agree to terms of use & privacy policy</p>
+					<p className=''>
+						By Continuing,i agree to terms of use & privacy policy
+					</p>
 				</div>
 				<div className='mt-2 flex justify-center'>
 					{currState === 'Login' ? (
@@ -115,7 +117,7 @@ const LoginPopUp = ({ setShowLogin }) => {
 						<p>
 							Already have an account?
 							<span
-								className='text-[#FF6347] underline cursor-pointer'
+								className='text-[#FF6347] ml-1 underline cursor-pointer'
 								onClick={() => setcurrState('Login')}>
 								Login here
 							</span>
